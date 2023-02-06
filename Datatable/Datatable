@@ -1,0 +1,201 @@
+    $('#chargestable').DataTable({
+        searching: false,
+        ordering: true,
+        scrollY: false,
+        select: true,
+        paging: false,
+        info: false,
+        "data": [{
+            "": "",
+            "Code": "70540",
+            "Description": "Ability 10 mg tablets (30s, plastic bottle)",
+            "Effective Date": "02/06/2022 08:28",
+            "Status": "Active",
+            "Rate": "19.00",
+            "Quantity": "1",
+            "Amount": "19.00",
+            "Action": "00.00",
+        }, {
+            "": "",
+            "Code": "70540",
+            "Description": "Ability 10 mg tablets (30s, plastic bottle)",
+            "Effective Date": "02/06/2022 08:28",
+            "Status": "Active",
+            "Rate": "19.00",
+            "Quantity": "1",
+            "Amount": "19.00",
+            "Action": "00.00",
+        }, {
+            "": "",
+
+            "Code": "70540",
+            "Description": "Ability 10 mg tablets (30s, plastic bottle)",
+            "Effective Date": "02/06/2022 08:28",
+            "Status": "Active",
+            "Rate": "19.00",
+            "Quantity": "1",
+            "Amount": "19.00",
+            "Action": "00.00",
+
+        }, {
+            "": "",
+
+            "Code": "70540",
+            "Description": "Ability 10 mg tablets (30s, plastic bottle)",
+            "Effective Date": "02/06/2022 08:28",
+            "Status": "Active",
+            "Rate": "19.00",
+            "Quantity": "1",
+            "Amount": "19.00",
+            "Action": "00.00",
+
+        }, {
+            "": "",
+
+            "Code": "70540",
+            "Description": "Ability 10 mg tablets (30s, plastic bottle)",
+            "Effective Date": "02/06/2022 08:28",
+            "Status": "Active",
+            "Rate": "19.00",
+            "Quantity": "1",
+            "Amount": "19.00",
+            "Action": "00.00",
+
+        }, {
+            "": "",
+
+            "Code": "70540",
+            "Description": "Ability 10 mg tablets (30s, plastic bottle)",
+            "Effective Date": "02/06/2022 08:28",
+            "Status": "Pending",
+            "Rate": "19.00",
+            "Quantity": "1",
+            "Amount": "19.00",
+            "Action": "00.00",
+
+        }, {
+            "": "",
+
+            "Code": "70540",
+            "Description": "Ability 10 mg tablets (30s, plastic bottle)",
+            "Effective Date": "02/06/2022 08:28",
+            "Status": "Pending",
+            "Rate": "19.00",
+            "Quantity": "1",
+            "Amount": "19.00",
+            "Action": "00.00",
+
+        }, {
+            "": "",
+
+            "Code": "70540",
+            "Description": "Ability 10 mg tablets (30s, plastic bottle)",
+            "Effective Date": "02/06/2022 08:28",
+            "Status": "Pending",
+            "Rate": "19.00",
+            "Quantity": "1",
+            "Amount": "19.00",
+            "Action": "00.00",
+
+
+        }
+
+
+        ],
+        "columns": [{
+            "data": ""
+
+        }, {
+            "data": "Code"
+        }, {
+            "data": "Description"
+        }, {
+            "data": "Effective Date"
+        }, {
+            "data": "Status"
+        }, {
+            "data": "Rate"
+        }, {
+            "data": "Quantity"
+        }, {
+            "data": "Amount"
+        }, {
+            "data": "Action"
+        }],
+        fixedColumns: {
+            left: 0,
+            right: 1
+        },
+        scrollX: true,
+        columnDefs: [{
+            targets: 0,
+            searchable: false,
+            orderable: false,
+            'render': function (data) {
+                return `<div class="form-check">
+                                                            <label class="form-check-label customcheck d-flex align-items-center" for="flexCheckDefault">
+                                                                <input class="form-check-input"
+                                                                    type="checkbox" value=""
+                                                                    id="flexCheckDefault" checked>
+                                                                <span class="checkinput"></span>
+                                                            </label>
+                                                        </div>`
+            }
+
+        }, {
+            targets: 1,
+            searchable: false,
+            orderable: false,
+            'render': function (data) {
+                return `<button class="text-info py-2 border-0 bg-white text-decoration-underline" id="button11"  data-bs-toggle="offcanvas" data-bs-target="#detailscanvas" aria-controls="offcanvasRight">${data}</button>`
+            }
+
+        }, {
+            targets: 2,
+            searchable: false,
+            orderable: false,
+        }, {
+            targets: 4,
+            searchable: false,
+            orderable: false,
+            'render': function (data) {
+                if (data == 'Active') {
+                    return `<span class="text-success bg-grad-light-mgreen badge-st px-2">${data}</span>`
+                } else if (data == 'Pending') {
+                    return `<span class="text-warning bg-light-yellow badge-st px-2">${data}</span>`
+                } else {
+                    return `<span>${data}</span>`
+                }
+
+            }
+        }, {
+            targets: 5,
+            searchable: false,
+            orderable: false,
+        }, {
+            targets: 6,
+            searchable: false,
+            orderable: false,
+        }, {
+            targets: 7,
+            searchable: false,
+            orderable: false,
+        }, {
+            targets: 8,
+            searchable: false,
+            orderable: false,
+            'render': function (data) {
+                return `<span class="material-symbols-outlined text-black pointer More-Option" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content-id="pop1" tabindex="0">more_horiz</span>
+                                            <div class="popovercontent d-none" id="pop1">
+                                                <div class="list-group">
+                                                    <a href="#" class="list-group-item list-group-item-action" aria-current="true">Edit</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Upgrade to Performed</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Raise Approval</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Interim Bill</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Add to Package</a>
+                                                    <a href="#" class="list-group-item list-group-item-action">Add to Favourites</a>
+                                                    <a href="#" class="list-group-item list-group-item-action text-danger">Cancel</a>
+                                                </div>`
+            }
+        },]
+    });
